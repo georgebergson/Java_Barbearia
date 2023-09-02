@@ -26,6 +26,7 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
         txfUsuario = new javax.swing.JTextField();
         txfSenha = new javax.swing.JPasswordField();
         lblUsuario = new javax.swing.JLabel();
@@ -36,6 +37,12 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton1.setBackground(new java.awt.Color(204, 255, 153));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 153, 51));
+        jButton1.setText("ENTRAR");
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 690, 320, 50));
         getContentPane().add(txfUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 500, 320, 50));
         getContentPane().add(txfSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 600, 320, 50));
 
@@ -100,6 +107,7 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel backgroundLogin;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel lblLogin;
     private javax.swing.JLabel lblSenha;
     private javax.swing.JLabel lblUsuario;
