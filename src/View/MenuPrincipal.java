@@ -29,10 +29,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuCadastro = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        itemCliente = new javax.swing.JMenuItem();
+        itemServico = new javax.swing.JMenuItem();
         jMenuOperacao = new javax.swing.JMenu();
-        jMenu1 = new javax.swing.JMenu();
+        jMenuRelatorios = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -40,21 +40,21 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jMenuCadastro.setText("Cadastros");
 
-        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/Icons/cliente-icon.png"))); // NOI18N
-        jMenuItem1.setText("Cliente");
-        jMenuCadastro.add(jMenuItem1);
+        itemCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/Icons/cliente-icon.png"))); // NOI18N
+        itemCliente.setText("Cliente");
+        jMenuCadastro.add(itemCliente);
 
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/Icons/tesoura-icon.png"))); // NOI18N
-        jMenuItem2.setText("Serviço");
-        jMenuCadastro.add(jMenuItem2);
+        itemServico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/Icons/tesoura-icon.png"))); // NOI18N
+        itemServico.setText("Serviço");
+        jMenuCadastro.add(itemServico);
 
         jMenuBar1.add(jMenuCadastro);
 
         jMenuOperacao.setText("Operação");
         jMenuBar1.add(jMenuOperacao);
 
-        jMenu1.setText("Relatórios");
-        jMenuBar1.add(jMenu1);
+        jMenuRelatorios.setText("Relatórios");
+        jMenuBar1.add(jMenuRelatorios);
 
         setJMenuBar(jMenuBar1);
 
@@ -112,12 +112,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem itemCliente;
+    private javax.swing.JMenuItem itemServico;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuCadastro;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenu jMenuOperacao;
+    private javax.swing.JMenu jMenuRelatorios;
     // End of variables declaration//GEN-END:variables
 }
