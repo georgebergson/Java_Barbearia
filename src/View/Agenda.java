@@ -26,11 +26,99 @@ public class Agenda extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        lblValor = new javax.swing.JLabel();
+        txfData = new javax.swing.JTextField();
+        lblHora = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTxaObservacao = new javax.swing.JTextArea();
+        txfHora = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTableResultado = new javax.swing.JTable();
+        lblData = new javax.swing.JLabel();
+        txfValor = new javax.swing.JTextField();
+        lblCliente = new javax.swing.JLabel();
+        lblServico = new javax.swing.JLabel();
+        selectServico = new javax.swing.JComboBox<>();
+        lblId1 = new javax.swing.JLabel();
+        txfId = new javax.swing.JTextField();
+        selectCliente = new javax.swing.JComboBox<>();
+        jButton1 = new javax.swing.JButton();
+        lblAgenda = new javax.swing.JLabel();
         painelAgenda = new javax.swing.JLabel();
         backgroundAgenda = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblValor.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblValor.setForeground(new java.awt.Color(255, 255, 255));
+        lblValor.setText("Valor R$");
+        getContentPane().add(lblValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 460, -1, -1));
+        getContentPane().add(txfData, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 530, 320, 50));
+
+        lblHora.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblHora.setForeground(new java.awt.Color(255, 255, 255));
+        lblHora.setText("Hora");
+        getContentPane().add(lblHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 620, -1, -1));
+
+        jTxaObservacao.setColumns(20);
+        jTxaObservacao.setRows(5);
+        jScrollPane1.setViewportView(jTxaObservacao);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 210, 540, 390));
+        getContentPane().add(txfHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 610, 320, 50));
+
+        jTableResultado.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"1", "GEORGE BERGSON P CASTILHO", "BARBA", "35", "02/09/2023", "14:58", "ELE É BEM EXIGENTE, POR FAVOR FAÇA DIRETO!"},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "ID", "CLIENTE", "SERVIÇO", "VALOR", "DATA", "HORA", "OBSERVAÇÃO"
+            }
+        ));
+        jScrollPane2.setViewportView(jTableResultado);
+
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 680, 930, 250));
+
+        lblData.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblData.setForeground(new java.awt.Color(255, 255, 255));
+        lblData.setText("Data");
+        getContentPane().add(lblData, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 540, -1, -1));
+        getContentPane().add(txfValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 450, 320, 50));
+
+        lblCliente.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblCliente.setForeground(new java.awt.Color(255, 255, 255));
+        lblCliente.setText("Cliente");
+        getContentPane().add(lblCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 300, -1, -1));
+
+        lblServico.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblServico.setForeground(new java.awt.Color(255, 255, 255));
+        lblServico.setText("Serviço");
+        getContentPane().add(lblServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 380, -1, -1));
+
+        getContentPane().add(selectServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, 320, 50));
+
+        lblId1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblId1.setForeground(new java.awt.Color(255, 255, 255));
+        lblId1.setText("Id");
+        getContentPane().add(lblId1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, -1, -1));
+        getContentPane().add(txfId, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 210, 320, 50));
+
+        getContentPane().add(selectCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 290, 320, 50));
+
+        jButton1.setBackground(new java.awt.Color(204, 255, 153));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 153, 51));
+        jButton1.setText("AGENDAR");
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 610, 540, 50));
+
+        lblAgenda.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        lblAgenda.setForeground(new java.awt.Color(255, 255, 255));
+        lblAgenda.setText("Agenda");
+        getContentPane().add(lblAgenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 140, -1, -1));
 
         painelAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/Agenda-PainelFundo.png"))); // NOI18N
         getContentPane().add(painelAgenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -78,6 +166,24 @@ public class Agenda extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel backgroundAgenda;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTableResultado;
+    private javax.swing.JTextArea jTxaObservacao;
+    private javax.swing.JLabel lblAgenda;
+    private javax.swing.JLabel lblCliente;
+    private javax.swing.JLabel lblData;
+    private javax.swing.JLabel lblHora;
+    private javax.swing.JLabel lblId1;
+    private javax.swing.JLabel lblServico;
+    private javax.swing.JLabel lblValor;
     private javax.swing.JLabel painelAgenda;
+    private javax.swing.JComboBox<String> selectCliente;
+    private javax.swing.JComboBox<String> selectServico;
+    private javax.swing.JTextField txfData;
+    private javax.swing.JTextField txfHora;
+    private javax.swing.JTextField txfId;
+    private javax.swing.JTextField txfValor;
     // End of variables declaration//GEN-END:variables
 }
