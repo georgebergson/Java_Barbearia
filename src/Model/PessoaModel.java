@@ -7,6 +7,8 @@ package Model;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -26,11 +28,15 @@ abstract public class PessoaModel {
         this.nome = nome;
     }
 
-    public PessoaModel(int id, String nome, char sexo, String data_nascimento, String telefone, String email, String rg) throws ParseException {
+    public PessoaModel(int id, String nome, char sexo, String data_nascimento, String telefone, String email, String rg){
         this.id = id;
         this.nome = nome;
         this.sexo = sexo;
-        this.data_nascimento = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(data_nascimento);
+        try {
+            this.data_nascimento = new SimpleDateFormat("dd/MM/yyyy").parse(data_nascimento);
+        } catch (ParseException ex) {
+            Logger.getLogger(PessoaModel.class.getName()).log(Level.SEVERE, null, ex);
+        }
         this.telefone = telefone;
         this.email = email;
         this.rg = rg;

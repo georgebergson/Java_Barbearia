@@ -7,6 +7,8 @@ package Model;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -20,12 +22,16 @@ public class AgendamentoModel {
     private Date data;
     private String observacao;
 
-    public AgendamentoModel(int id, ClienteModel cliente, ServicoModel servico, float valor, String data) throws ParseException {
+    public AgendamentoModel(int id, ClienteModel cliente, ServicoModel servico, float valor, String data) {
         this.id = id;
         this.cliente = cliente;
         this.servico = servico;
         this.valor = valor;
-        this.data = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(data);
+        try {
+            this.data = new SimpleDateFormat("dd/MM/yyyy").parse(data);
+        } catch (ParseException ex) {
+            Logger.getLogger(AgendamentoModel.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public int getId() {

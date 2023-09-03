@@ -5,6 +5,10 @@
 package View;
 
 import Controller.LoginController;
+import Model.DAO.Banco;
+import java.text.ParseException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
@@ -19,9 +23,10 @@ public class Login extends javax.swing.JFrame {
      */
     private final LoginController logincontroller;
     
-    public Login() {
+    public Login() throws ParseException {
         initComponents();
        this.logincontroller = new LoginController(this);
+       Banco.inicia();
     }
 
     /**
@@ -116,7 +121,11 @@ public class Login extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Login().setVisible(true);
+                try {
+                    new Login().setVisible(true);
+                } catch (ParseException ex) {
+                    Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }

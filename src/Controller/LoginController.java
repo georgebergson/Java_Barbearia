@@ -23,6 +23,8 @@ public class LoginController {
     
     public void entrarNoSistema(){
        UsuarioModel usuario = loginhelper.obterModelo();
+       
+        System.out.println(usuario.getNome());
     }
 
 }

@@ -21,7 +21,7 @@ public class LoginHelper {
     
     public UsuarioModel obterModelo(){
         String usuario = loginview.getTxfUsuario().getText();
-        char[] senha = loginview.getTxfSenha().getPassword();
+        String senha = loginview.getTxfSenha().getText();
         
         UsuarioModel usuariomodelo = new UsuarioModel(0,usuario,senha);
         return usuariomodelo;
@@ -29,10 +29,10 @@ public class LoginHelper {
     
     public void setarModel(UsuarioModel usuariomodelo){
         String usuario = usuariomodelo.getNome();
-        char[] senha = usuariomodelo.getSenha();
+        String senha = usuariomodelo.getSenha();
         
         loginview.getTxfUsuario().setText(usuario);
-        loginview.getTxfSenha().setText(Arrays.toString(senha));
+        loginview.getTxfSenha().setText(senha);
     }
     
     public void limparTela(){
