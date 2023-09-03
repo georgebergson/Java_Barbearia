@@ -4,6 +4,8 @@
  */
 package Model;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -24,11 +26,11 @@ abstract public class PessoaModel {
         this.nome = nome;
     }
 
-    public PessoaModel(int id, String nome, char sexo, Date data_nascimento, String telefone, String email, String rg) {
+    public PessoaModel(int id, String nome, char sexo, String data_nascimento, String telefone, String email, String rg) throws ParseException {
         this.id = id;
         this.nome = nome;
         this.sexo = sexo;
-        this.data_nascimento = data_nascimento;
+        this.data_nascimento = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(data_nascimento);
         this.telefone = telefone;
         this.email = email;
         this.rg = rg;

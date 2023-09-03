@@ -4,6 +4,7 @@
  */
 package Model;
 
+import java.text.ParseException;
 import java.util.Date;
 
 /**
@@ -18,7 +19,7 @@ public class UsuarioModel extends PessoaModel {
         super(id, nome);
     }
 
-    public UsuarioModel(String senha, String nivel_acesso, int id, String nome, char sexo, Date data_nascimento, String telefone, String email, String rg) {
+    public UsuarioModel(String senha, String nivel_acesso, int id, String nome, char sexo, String data_nascimento, String telefone, String email, String rg) throws ParseException {
         super(id, nome, sexo, data_nascimento, telefone, email, rg);
         this.senha = senha;
         this.nivel_acesso = nivel_acesso;
