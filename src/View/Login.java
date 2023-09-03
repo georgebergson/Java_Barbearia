@@ -4,6 +4,10 @@
  */
 package View;
 
+import Controller.LoginController;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
 /**
  *
  * @author user
@@ -13,8 +17,11 @@ public class Login extends javax.swing.JFrame {
     /**
      * Creates new form Login
      */
+    private final LoginController logincontroller;
+    
     public Login() {
         initComponents();
+       this.logincontroller = new LoginController(this);
     }
 
     /**
@@ -26,7 +33,7 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        jButtonEntrarLogin = new javax.swing.JButton();
         txfUsuario = new javax.swing.JTextField();
         txfSenha = new javax.swing.JPasswordField();
         lblUsuario = new javax.swing.JLabel();
@@ -36,39 +43,48 @@ public class Login extends javax.swing.JFrame {
         backgroundLogin = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Sistema de Barbearia");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(204, 255, 153));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 153, 51));
-        jButton1.setText("ENTRAR");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 690, 320, 50));
-        getContentPane().add(txfUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 500, 320, 50));
-        getContentPane().add(txfSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 600, 320, 50));
+        jButtonEntrarLogin.setBackground(new java.awt.Color(204, 255, 153));
+        jButtonEntrarLogin.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButtonEntrarLogin.setForeground(new java.awt.Color(0, 153, 51));
+        jButtonEntrarLogin.setText("ENTRAR");
+        jButtonEntrarLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEntrarLoginActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonEntrarLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, 150, 30));
+        getContentPane().add(txfUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 150, 30));
+        getContentPane().add(txfSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 150, 30));
 
-        lblUsuario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblUsuario.setForeground(new java.awt.Color(255, 255, 255));
         lblUsuario.setText("Usuario");
-        getContentPane().add(lblUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 470, -1, -1));
+        getContentPane().add(lblUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, -1, 10));
 
-        lblSenha.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblSenha.setForeground(new java.awt.Color(255, 255, 255));
         lblSenha.setText("Senha");
-        getContentPane().add(lblSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 570, -1, -1));
+        getContentPane().add(lblSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, -1, 10));
 
         lblLogin.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         lblLogin.setForeground(new java.awt.Color(255, 255, 255));
         lblLogin.setText("Login");
-        getContentPane().add(lblLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, -1, -1));
+        getContentPane().add(lblLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, -1, -1));
 
         painelFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/painel-login.png"))); // NOI18N
-        getContentPane().add(painelFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, -1, -1));
+        getContentPane().add(painelFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
 
         backgroundLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/Logo.jpg"))); // NOI18N
         getContentPane().add(backgroundLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonEntrarLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarLoginActionPerformed
+        // TODO add your handling code here:
+        this.logincontroller.entrarNoSistema();
+    }//GEN-LAST:event_jButtonEntrarLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -105,9 +121,25 @@ public class Login extends javax.swing.JFrame {
         });
     }
 
+    public JPasswordField getTxfSenha() {
+        return txfSenha;
+    }
+
+    public void setTxfSenha(JPasswordField txfSenha) {
+        this.txfSenha = txfSenha;
+    }
+
+    public JTextField getTxfUsuario() {
+        return txfUsuario;
+    }
+
+    public void setTxfUsuario(JTextField txfUsuario) {
+        this.txfUsuario = txfUsuario;
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel backgroundLogin;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonEntrarLogin;
     private javax.swing.JLabel lblLogin;
     private javax.swing.JLabel lblSenha;
     private javax.swing.JLabel lblUsuario;

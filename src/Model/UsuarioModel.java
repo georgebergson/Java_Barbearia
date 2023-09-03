@@ -12,24 +12,24 @@ import java.util.Date;
  * @author user
  */
 public class UsuarioModel extends PessoaModel {
-    private String senha;
+    private char[] senha;
     private String nivel_acesso;
 
-    public UsuarioModel(int id, String nome) {
+    public UsuarioModel(int id, String nome,char[] senha) {
         super(id, nome);
     }
 
-    public UsuarioModel(String senha, String nivel_acesso, int id, String nome, char sexo, String data_nascimento, String telefone, String email, String rg) throws ParseException {
+    public UsuarioModel(char[] senha, String nivel_acesso, int id, String nome, char sexo, String data_nascimento, String telefone, String email, String rg) throws ParseException {
         super(id, nome, sexo, data_nascimento, telefone, email, rg);
         this.senha = senha;
         this.nivel_acesso = nivel_acesso;
     }
 
-    public String getSenha() {
+    public char[] getSenha() {
         return senha;
     }
 
-    public void setSenha(String senha) {
+    public void setSenha(char[] senha) {
         this.senha = senha;
     }
 
