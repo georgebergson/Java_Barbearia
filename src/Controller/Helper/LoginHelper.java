@@ -21,7 +21,8 @@ public class LoginHelper {
     
     public UsuarioModel obterModelo(){
         String usuario = loginview.getTxfUsuario().getText();
-        String senha = loginview.getTxfSenha().getText();
+        char[] password = loginview.getTxfSenha().getPassword(); // Obtém o array de caracteres da senha
+        String senha = new String(password); // Converte o array de caracteres em uma string
         
         UsuarioModel usuariomodelo = new UsuarioModel(0,usuario,senha);
         return usuariomodelo;

@@ -6,9 +6,11 @@ package View;
 
 import Controller.LoginController;
 import Model.DAO.Banco;
+import java.text.MessageFormat;
 import java.text.ParseException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
@@ -144,6 +146,10 @@ public class Login extends javax.swing.JFrame {
 
     public void setTxfUsuario(JTextField txfUsuario) {
         this.txfUsuario = txfUsuario;
+    }
+    
+    public void mensagem(String msg){
+        JOptionPane.showMessageDialog(null, msg);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
