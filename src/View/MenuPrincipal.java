@@ -4,17 +4,20 @@
  */
 package View;
 
+import Controller.MenuPrincipalController;
+
 /**
  *
  * @author user
  */
 public class MenuPrincipal extends javax.swing.JFrame {
-
+    private final MenuPrincipalController menuprincipalcontroller;
     /**
      * Creates new form MenuPrincipal
      */
     public MenuPrincipal() {
         initComponents();
+        this.menuprincipalcontroller = new MenuPrincipalController(this);
     }
 
     /**
@@ -32,6 +35,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         itemCliente = new javax.swing.JMenuItem();
         itemServico = new javax.swing.JMenuItem();
         jMenuOperacao = new javax.swing.JMenu();
+        jMenuItemAgendamento = new javax.swing.JMenuItem();
         jMenuRelatorios = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -51,6 +55,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(jMenuCadastro);
 
         jMenuOperacao.setText("Operação");
+
+        jMenuItemAgendamento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/Icons/agenda-icon.png"))); // NOI18N
+        jMenuItemAgendamento.setText("Agendamento");
+        jMenuItemAgendamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemAgendamentoActionPerformed(evt);
+            }
+        });
+        jMenuOperacao.add(jMenuItemAgendamento);
+
         jMenuBar1.add(jMenuOperacao);
 
         jMenuRelatorios.setText("Relatórios");
@@ -75,6 +89,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItemAgendamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAgendamentoActionPerformed
+        this.menuprincipalcontroller.abrirAgenda();        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemAgendamentoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -117,6 +135,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuCadastro;
+    private javax.swing.JMenuItem jMenuItemAgendamento;
     private javax.swing.JMenu jMenuOperacao;
     private javax.swing.JMenu jMenuRelatorios;
     // End of variables declaration//GEN-END:variables

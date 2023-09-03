@@ -53,34 +53,34 @@ public class Login extends javax.swing.JFrame {
         setTitle("Sistema de Barbearia");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButtonEntrarLogin.setBackground(new java.awt.Color(204, 255, 153));
+        jButtonEntrarLogin.setBackground(new java.awt.Color(196, 160, 111));
         jButtonEntrarLogin.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButtonEntrarLogin.setForeground(new java.awt.Color(0, 153, 51));
+        jButtonEntrarLogin.setForeground(new java.awt.Color(255, 255, 255));
         jButtonEntrarLogin.setText("ENTRAR");
         jButtonEntrarLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonEntrarLoginActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonEntrarLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, 150, 30));
-        getContentPane().add(txfUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 150, 30));
-        getContentPane().add(txfSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 150, 30));
+        getContentPane().add(jButtonEntrarLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 390, 150, 30));
+        getContentPane().add(txfUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 280, 150, 30));
+        getContentPane().add(txfSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 340, 150, 30));
 
         lblUsuario.setForeground(new java.awt.Color(255, 255, 255));
         lblUsuario.setText("Usuario");
-        getContentPane().add(lblUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, -1, 10));
+        getContentPane().add(lblUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, -1, 10));
 
         lblSenha.setForeground(new java.awt.Color(255, 255, 255));
         lblSenha.setText("Senha");
-        getContentPane().add(lblSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, -1, 10));
+        getContentPane().add(lblSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 320, -1, 10));
 
-        lblLogin.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        lblLogin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblLogin.setForeground(new java.awt.Color(255, 255, 255));
         lblLogin.setText("Login");
-        getContentPane().add(lblLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, -1, -1));
+        getContentPane().add(lblLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, -1, -1));
 
         painelFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/painel-login.png"))); // NOI18N
-        getContentPane().add(painelFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, -1));
+        getContentPane().add(painelFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
 
         backgroundLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/Logo.jpg"))); // NOI18N
         getContentPane().add(backgroundLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
