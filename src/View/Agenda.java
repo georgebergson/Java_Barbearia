@@ -4,17 +4,22 @@
  */
 package View;
 
+import Controller.AgendaController;
+import javax.swing.JTable;
+
 /**
  *
  * @author user
  */
 public class Agenda extends javax.swing.JFrame {
-
+    private final AgendaController controller;
     /**
      * Creates new form Agenda
      */
     public Agenda() {
         initComponents();
+        controller = new AgendaController(this);
+        controller.atualizaTabela();
     }
 
     /**
@@ -47,30 +52,29 @@ public class Agenda extends javax.swing.JFrame {
         painelAgenda = new javax.swing.JLabel();
         backgroundAgenda = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblValor.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblValor.setForeground(new java.awt.Color(255, 255, 255));
         lblValor.setText("Valor R$");
-        getContentPane().add(lblValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 460, -1, -1));
-        getContentPane().add(txfData, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 530, 320, 50));
+        getContentPane().add(lblValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, -1, -1));
+        getContentPane().add(txfData, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 320, 320, 35));
 
         lblHora.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblHora.setForeground(new java.awt.Color(255, 255, 255));
         lblHora.setText("Hora");
-        getContentPane().add(lblHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 620, -1, -1));
+        getContentPane().add(lblHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 360, -1, -1));
 
         jTxaObservacao.setColumns(20);
         jTxaObservacao.setRows(5);
         jScrollPane1.setViewportView(jTxaObservacao);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 210, 540, 390));
-        getContentPane().add(txfHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 610, 320, 50));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 160, 560, 190));
+        getContentPane().add(txfHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 360, 320, 35));
 
         jTableResultado.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"1", "GEORGE BERGSON P CASTILHO", "BARBA", "35", "02/09/2023", "14:58", "ELE É BEM EXIGENTE, POR FAVOR FAÇA DIRETO!"},
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null}
@@ -81,50 +85,50 @@ public class Agenda extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTableResultado);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 680, 930, 250));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 410, 930, 250));
 
         lblData.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblData.setForeground(new java.awt.Color(255, 255, 255));
         lblData.setText("Data");
-        getContentPane().add(lblData, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 540, -1, -1));
-        getContentPane().add(txfValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 450, 320, 50));
+        getContentPane().add(lblData, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 330, -1, -1));
+        getContentPane().add(txfValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 280, 320, 35));
 
         lblCliente.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblCliente.setForeground(new java.awt.Color(255, 255, 255));
         lblCliente.setText("Cliente");
-        getContentPane().add(lblCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 300, -1, -1));
+        getContentPane().add(lblCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, -1, -1));
 
         lblServico.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblServico.setForeground(new java.awt.Color(255, 255, 255));
         lblServico.setText("Serviço");
-        getContentPane().add(lblServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 380, -1, -1));
+        getContentPane().add(lblServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, -1, -1));
 
-        getContentPane().add(selectServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, 320, 50));
+        getContentPane().add(selectServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 320, 35));
 
         lblId1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblId1.setForeground(new java.awt.Color(255, 255, 255));
         lblId1.setText("Id");
-        getContentPane().add(lblId1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, -1, -1));
-        getContentPane().add(txfId, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 210, 320, 50));
+        getContentPane().add(lblId1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, -1));
+        getContentPane().add(txfId, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 320, 35));
 
-        getContentPane().add(selectCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 290, 320, 50));
+        getContentPane().add(selectCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, 320, 35));
 
         jButton1.setBackground(new java.awt.Color(204, 255, 153));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 153, 51));
         jButton1.setText("AGENDAR");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 610, 540, 50));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 350, 560, 45));
 
         lblAgenda.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         lblAgenda.setForeground(new java.awt.Color(255, 255, 255));
         lblAgenda.setText("Agenda");
-        getContentPane().add(lblAgenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 140, -1, -1));
+        getContentPane().add(lblAgenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 90, -1, -1));
 
         painelAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/Agenda-PainelFundo.png"))); // NOI18N
-        getContentPane().add(painelAgenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(painelAgenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -120, -1, -1));
 
         backgroundAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Images/AgendaFundo.png"))); // NOI18N
-        getContentPane().add(backgroundAgenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(backgroundAgenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -120, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -186,4 +190,13 @@ public class Agenda extends javax.swing.JFrame {
     private javax.swing.JTextField txfId;
     private javax.swing.JTextField txfValor;
     // End of variables declaration//GEN-END:variables
+
+    public JTable getjTableResultado() {
+        return jTableResultado;
+    }
+
+    public void setjTableResultado(JTable jTableResultado) {
+        this.jTableResultado = jTableResultado;
+    }
+
 }
