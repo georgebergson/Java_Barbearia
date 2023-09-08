@@ -5,6 +5,7 @@
 package View;
 
 import Controller.AgendaController;
+import javax.swing.JComboBox;
 import javax.swing.JTable;
 
 /**
@@ -19,7 +20,7 @@ public class Agenda extends javax.swing.JFrame {
     public Agenda() {
         initComponents();
         controller = new AgendaController(this);
-        controller.atualizaTabela();
+       iniciar();
     }
 
     /**
@@ -198,5 +199,29 @@ public class Agenda extends javax.swing.JFrame {
     public void setjTableResultado(JTable jTableResultado) {
         this.jTableResultado = jTableResultado;
     }
+
+    public JComboBox<String> getSelectCliente() {
+        return selectCliente;
+    }
+
+    public void setSelectCliente(JComboBox<String> selectCliente) {
+        this.selectCliente = selectCliente;
+    }
+
+    public JComboBox<String> getSelectServico() {
+        return selectServico;
+    }
+
+    public void setSelectServico(JComboBox<String> selectServico) {
+        this.selectServico = selectServico;
+    }
+    
+
+    private void iniciar() {
+         controller.atualizaTabela();
+         controller.atualizaCliente();
+         controller.atualizaServico();
+    }
+   
 
 }

@@ -5,9 +5,12 @@
 package Controller.Helper;
 
 import Model.AgendamentoModel;
+import Model.ClienteModel;
 import Model.DAO.AgendamentoDAO;
+import Model.ServicoModel;
 import View.Agenda;
 import java.util.ArrayList;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -38,6 +41,22 @@ public class AgendamentoHelper {
             
         }
         
+    }
+
+    public void preencherCliente(ArrayList<ClienteModel> selectAll) {
+        DefaultComboBoxModel selecCliente = (DefaultComboBoxModel) view.getSelectCliente().getModel();
+        
+        for (ClienteModel clienteModel : selectAll) {
+            selecCliente.addElement(clienteModel);
+        }
+    }
+
+    public void preencherServico(ArrayList<ServicoModel> selectAll) {
+        DefaultComboBoxModel selecServico = (DefaultComboBoxModel) view.getSelectServico().getModel();
+        
+        for (ServicoModel servicoModel : selectAll) {
+            selecServico.addElement(servicoModel);
+        }
     }
     
    

@@ -42,5 +42,8 @@ public class ClienteModel extends PessoaModel {
     }
     
 
-    
+    @Override
+    public String toString(){
+        return getNome();
+    }
 }
