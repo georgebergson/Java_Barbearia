@@ -14,7 +14,7 @@ import View.MenuPrincipal;
  *
  * @author user
  */
-public class LoginController {
+public class LoginController  {
 
     private final Login loginview;
     private final LoginHelper loginhelper;

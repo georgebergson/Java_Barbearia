@@ -6,7 +6,6 @@ package Controller.Helper;
 
 import Model.AgendamentoModel;
 import Model.ClienteModel;
-import Model.DAO.AgendamentoDAO;
 import Model.ServicoModel;
 import View.Agenda;
 import java.util.ArrayList;
@@ -17,7 +16,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author user
  */
-public class AgendamentoHelper {
+public class AgendamentoHelper implements iHelper {
     private final Agenda view;
 
     public AgendamentoHelper(Agenda view) {
@@ -65,6 +64,16 @@ public class AgendamentoHelper {
 
     public void setarValor(float valor) {
         view.getTxfValor().setText(Float.toString(valor));
+    }
+
+    @Override
+    public Object obterModelo() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void limparTela() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
    

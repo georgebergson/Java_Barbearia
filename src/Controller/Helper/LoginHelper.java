@@ -6,13 +6,12 @@ package Controller.Helper;
 
 import Model.UsuarioModel;
 import View.Login;
-import java.util.Arrays;
 
 /**
  *
  * @author user
  */
-public class LoginHelper {
+public class LoginHelper implements iHelper{
 
     private final Login loginview;
     public LoginHelper(Login loginview) {

@@ -124,6 +124,11 @@ public class Agenda extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 153, 51));
         jButton1.setText("AGENDAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 350, 560, 45));
 
         lblAgenda.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
@@ -141,8 +146,12 @@ public class Agenda extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void selectServicoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_selectServicoItemStateChanged
-        controller.atualizaValor();
+        this.controller.atualizaValor();
     }//GEN-LAST:event_selectServicoItemStateChanged
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      this.controller.agendar();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -236,10 +245,10 @@ public class Agenda extends javax.swing.JFrame {
     
 
     private void iniciar() {
-         controller.atualizaTabela();
-         controller.atualizaCliente();
-         controller.atualizaServico();
-         controller.atualizaValor();
+         this.controller.atualizaTabela();
+         this.controller.atualizaCliente();
+         this.controller.atualizaServico();
+         this.controller.atualizaValor();
     }
    
 

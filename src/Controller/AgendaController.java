@@ -18,7 +18,7 @@ import java.util.ArrayList;
  *
  * @author user
  */
-public class AgendaController {
+public class AgendaController  {
     private final Agenda view;
     private final AgendamentoHelper helper;
     
@@ -51,5 +51,9 @@ public class AgendaController {
         public void atualizaValor(){
             ServicoModel servico = helper.obterServico();
             helper.setarValor(servico.getValor());
+        }
+        
+        public void agendar(){
+            
         }
 }
