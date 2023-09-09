@@ -47,4 +47,9 @@ public class AgendaController {
         
         helper.preencherServico(selectAll);
     }
+        
+        public void atualizaValor(){
+            ServicoModel servico = helper.obterServico();
+            helper.setarValor(servico.getValor());
+        }
 }

@@ -58,6 +58,14 @@ public class AgendamentoHelper {
             selecServico.addElement(servicoModel);
         }
     }
+
+    public ServicoModel obterServico() {
+        return (ServicoModel) view.getSelectServico().getSelectedItem();
+    }
+
+    public void setarValor(float valor) {
+        view.getTxfValor().setText(Float.toString(valor));
+    }
     
    
 }

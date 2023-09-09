@@ -7,6 +7,7 @@ package View;
 import Controller.AgendaController;
 import javax.swing.JComboBox;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 
 /**
  *
@@ -104,6 +105,11 @@ public class Agenda extends javax.swing.JFrame {
         lblServico.setText("Serviço");
         getContentPane().add(lblServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, -1, -1));
 
+        selectServico.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                selectServicoItemStateChanged(evt);
+            }
+        });
         getContentPane().add(selectServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 320, 35));
 
         lblId1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -133,6 +139,10 @@ public class Agenda extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void selectServicoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_selectServicoItemStateChanged
+        controller.atualizaValor();
+    }//GEN-LAST:event_selectServicoItemStateChanged
 
     /**
      * @param args the command line arguments
@@ -215,12 +225,21 @@ public class Agenda extends javax.swing.JFrame {
     public void setSelectServico(JComboBox<String> selectServico) {
         this.selectServico = selectServico;
     }
+
+    public JTextField getTxfValor() {
+        return txfValor;
+    }
+
+    public void setTxfValor(JTextField txfValor) {
+        this.txfValor = txfValor;
+    }
     
 
     private void iniciar() {
          controller.atualizaTabela();
          controller.atualizaCliente();
          controller.atualizaServico();
+         controller.atualizaValor();
     }
    
 
