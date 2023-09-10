@@ -58,6 +58,10 @@ public class AgendamentoHelper implements iHelper {
         }
     }
 
+    public ClienteModel obterCliente() {
+        return (ClienteModel) view.getSelectCliente().getSelectedItem();
+    }
+    
     public ServicoModel obterServico() {
         return (ServicoModel) view.getSelectServico().getSelectedItem();
     }
@@ -67,13 +71,30 @@ public class AgendamentoHelper implements iHelper {
     }
 
     @Override
-    public Object obterModelo() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public AgendamentoModel obterModelo() {
+        String idString = view.getTxfId().getText();
+        int id = Integer.parseInt(idString);
+        
+        ClienteModel cliente = obterCliente();
+        ServicoModel servico = obterServico();
+        
+        String valorString = view.getTxfValor().getText();
+        float valor = Float.parseFloat(valorString);
+        String data = view.getTxfData().getText();
+        //String hora = view.getTxfHora().getText();
+        String observacao = view.getjTxaObservacao().getText();
+        
+        AgendamentoModel agendamento = new AgendamentoModel(id,cliente,servico,valor,data,observacao);
+        return agendamento;
     }
 
     @Override
     public void limparTela() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        view.getTxfId().setText("");
+        view.getTxfData().setText("");
+        view.getTxfHora().setText("");
+        view.getTxfValor().setText("");
+        view.getjTxaObservacao().setText("");
     }
     
    

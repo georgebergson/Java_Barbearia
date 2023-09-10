@@ -54,6 +54,9 @@ public class AgendaController  {
         }
         
         public void agendar(){
-            
+            AgendamentoModel agendamento = helper.obterModelo();
+            new AgendamentoDAO().insert(agendamento);
+            atualizaTabela();
+            helper.limparTela();
         }
 }

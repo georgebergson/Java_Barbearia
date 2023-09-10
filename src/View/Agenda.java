@@ -7,6 +7,7 @@ package View;
 import Controller.AgendaController;
 import javax.swing.JComboBox;
 import javax.swing.JTable;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 /**
@@ -116,6 +117,9 @@ public class Agenda extends javax.swing.JFrame {
         lblId1.setForeground(new java.awt.Color(255, 255, 255));
         lblId1.setText("Id");
         getContentPane().add(lblId1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, -1));
+
+        txfId.setText("0");
+        txfId.setEnabled(false);
         getContentPane().add(txfId, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 320, 35));
 
         getContentPane().add(selectCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, 320, 35));
@@ -241,6 +245,38 @@ public class Agenda extends javax.swing.JFrame {
 
     public void setTxfValor(JTextField txfValor) {
         this.txfValor = txfValor;
+    }
+
+    public JTextArea getjTxaObservacao() {
+        return jTxaObservacao;
+    }
+
+    public void setjTxaObservacao(JTextArea jTxaObservacao) {
+        this.jTxaObservacao = jTxaObservacao;
+    }
+
+    public JTextField getTxfData() {
+        return txfData;
+    }
+
+    public void setTxfData(JTextField txfData) {
+        this.txfData = txfData;
+    }
+
+    public JTextField getTxfHora() {
+        return txfHora;
+    }
+
+    public void setTxfHora(JTextField txfHora) {
+        this.txfHora = txfHora;
+    }
+
+    public JTextField getTxfId() {
+        return txfId;
+    }
+
+    public void setTxfId(JTextField txfId) {
+        this.txfId = txfId;
     }
     
 

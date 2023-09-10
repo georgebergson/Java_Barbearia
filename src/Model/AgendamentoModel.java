@@ -33,6 +33,11 @@ public class AgendamentoModel {
             Logger.getLogger(AgendamentoModel.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    public AgendamentoModel(int id, ClienteModel cliente, ServicoModel servico, float valor, String data, String observacao){
+        this(id,cliente,servico,valor,data);
+        this.observacao = observacao;
+    }
 
     public int getId() {
         return id;
