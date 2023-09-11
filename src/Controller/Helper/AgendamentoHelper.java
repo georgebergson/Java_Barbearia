@@ -90,7 +90,7 @@ public class AgendamentoHelper implements iHelper {
 
     @Override
     public void limparTela() {
-        view.getTxfId().setText("");
+        view.getTxfId().setText("0");
         view.getTxfData().setText("");
         view.getTxfHora().setText("");
         view.getTxfValor().setText("");

@@ -3,8 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Projetos/Java/Barbearia/src/Controller/AgendaController.java</file>
+            <file>file:/C:/Projetos/Java/Barbearia/src/Model/DAO/AgendamentoDAO.java</file>
+            <file>file:/C:/Projetos/Java/Barbearia/src/View/Agenda.java</file>
             <file>file:/C:/Projetos/Java/Barbearia/src/View/Login.java</file>
+            <file>file:/C:/Projetos/Java/Barbearia/src/Servico/EmailTeste.java</file>
             <file>file:/C:/Projetos/Java/Barbearia/src/Controller/Helper/LoginHelper.java</file>
+            <file>file:/C:/Projetos/Java/Barbearia/src/Model/AgendamentoModel.java</file>
+            <file>file:/C:/Projetos/Java/Barbearia/src/Model/DAO/Banco.java</file>
+            <file>file:/C:/Projetos/Java/Barbearia/src/Controller/Helper/AgendamentoHelper.java</file>
+            <file>file:/C:/Projetos/Java/Barbearia/src/Servico/Email.java</file>
+            <file>file:/C:/Projetos/Java/Barbearia/src/Model/DAO/ClienteDAO.java</file>
         </group>
     </open-files>
 </project-private>

@@ -6,6 +6,7 @@ package View;
 
 import Controller.AgendaController;
 import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -286,6 +287,8 @@ public class Agenda extends javax.swing.JFrame {
          this.controller.atualizaServico();
          this.controller.atualizaValor();
     }
-   
+   public void mensagem(String msg){
+        JOptionPane.showMessageDialog(null, msg);
+    }
 
 }

@@ -6,7 +6,6 @@ package View;
 
 import Controller.LoginController;
 import Model.DAO.Banco;
-import java.text.MessageFormat;
 import java.text.ParseException;
 import java.util.logging.Level;
 import java.util.logging.Logger;

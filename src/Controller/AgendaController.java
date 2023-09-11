@@ -12,6 +12,7 @@ import Model.DAO.ClienteDAO;
 import Model.DAO.ServicoDAO;
 import Model.ServicoModel;
 import View.Agenda;
+import email.Email;
 import java.util.ArrayList;
 
 /**
@@ -56,7 +57,16 @@ public class AgendaController  {
         public void agendar(){
             AgendamentoModel agendamento = helper.obterModelo();
             new AgendamentoDAO().insert(agendamento);
+            this.enviarEmail(agendamento);
             atualizaTabela();
             helper.limparTela();
+            view.mensagem("Email Enviado com Sucesso!");
+        }
+        
+        public void enviarEmail(AgendamentoModel agendamento){
+            Email email = new Email("Barbearia Java","Parabens "+agendamento.getCliente().getNome()+" você agendou na <strong>Barbearia Java</strong>\n "
+                    + "seu serviço "+agendamento.getServico().getDescricao()+" no valor "+agendamento.getServico().getValor()+"\n  "
+                    + "seu agendamento ficou para "+agendamento.getData()+" "+ "", "tiagoluz.h607@gmail.com");
+            email.enviar();
         }
 }

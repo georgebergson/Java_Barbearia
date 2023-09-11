@@ -47,6 +47,7 @@ public class Banco {
         ClienteModel cliente8 = new ClienteModel(8, "Aline Ferrari", 'F', "04/03/1990", "302121451", "alineferraripet@gmail.com", "8475123687", "Rua hyrule 32 Canudos NH",  "9334714747");
         ClienteModel cliente9 = new ClienteModel(9, "Samuel Coltinho", 'M', "09/02/1998", "302121189", "samuelcoltinhopet@gmail.com", "74595142487", "Rua floresta 12 Canudos NH",  "9330046364");
         ClienteModel cliente10 = new ClienteModel(10, "Felipe Luis", 'M', "12/06/1999", "3021212478", "felipeluispet@gmail.com", "845713647", "Rua marechal 1023 Canudos NH",  "933000874");
+        ClienteModel cliente11 = new ClienteModel(11, "George Bergson", 'M', "13/04/1987", "76820708", "george_bergson@hotmail.com", "845713647", "Rua marechal 1023 Canudos NH",  "933000874");
         
         ServicoModel servico1 = new ServicoModel(1, "Corte Simples", 18);
         ServicoModel servico2 = new ServicoModel(2, "Corte Degrade", 30);
@@ -73,6 +74,7 @@ public class Banco {
         cliente.add(cliente8);
         cliente.add(cliente9);
         cliente.add(cliente10);
+        cliente.add(cliente11);
         
         servico.add(servico1);
         servico.add(servico2);
